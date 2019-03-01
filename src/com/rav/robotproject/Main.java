@@ -5,9 +5,11 @@ import com.rav.util.*;
 
 public class Main{
     public static void main(String args[]){
-        DriveAgent da = new DriveAgent();
+        LedAgent da = new LedAgent();
         ProximitySenseAgent psa = new ProximitySenseAgent();
+        CameraAgent ca = new CameraAgent();
         MessageSpace.register(da);
+        MessageSpace.register(ca);
         MessageSpace.register(psa);
         psa.start();
 
